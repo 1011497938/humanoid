@@ -1,0 +1,11 @@
+<launch>
+  <node
+    pkg="dbehavior"
+    name="dbehavior_node"
+    type="main.py"
+    output="screen"
+    respawn="false"
+    cwd="node"
+    args=""
+    />
+</launch>

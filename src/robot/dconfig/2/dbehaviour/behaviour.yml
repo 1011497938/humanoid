@@ -1,0 +1,7 @@
+dbehavior:
+  role: "Defender"
+  game_controller:
+    connect:       false # Whether listen to GC
+    ourcolor:      red # Team color
+    firstHalf:     true # First half ? if not connected
+    kickoffteam:   red # kickoffteam if not connected

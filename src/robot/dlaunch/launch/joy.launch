@@ -1,0 +1,7 @@
+<launch>
+   <env name="ROSCONSOLE_CONFIG_FILE"
+       value="$(find dlaunch)/drosconsole.conf"/>
+  <!-- <include file="$(find dvision)/launch/dvision.launch" /> -->
+  <include file="$(find dbehavior)/launch/djoy.launch" />
+  <include file="$(find dmotion)/launch/dmotion.launch" />
+</launch>

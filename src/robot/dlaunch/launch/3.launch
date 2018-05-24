@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find dlaunch)/launch/sim_1.launch"/>
+    <include file="$(find dlaunch)/launch/sim_2.launch"/>
+    <include file="$(find dlaunch)/launch/sim_3.launch"/>    
+    <param name="/ZJUDancer/Simulation" value="true"/>
+</launch>

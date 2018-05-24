@@ -1,0 +1,21 @@
+<launch>
+    <arg name="skill"/>
+    <node pkg="dbehavior" 
+          name="dbehavior_1" 
+          type="main.py" 
+          output="screen" 
+          respawn="false" 
+          cwd="node" 
+          args="">
+        <param name="skill" value="$(arg skill)"/>
+
+        <param name="RobotId" type="int" value="1"/>
+        <rosparam command="load" file="$(find dconfig)/1/dbehaviour/constant.yml"/>
+        <rosparam command="load" file="$(find dconfig)/1/dbehaviour/robot_config.yml"/>
+        <rosparam command="load" file="$(find dconfig)/1/dbehaviour/behaviour.yml"/>
+    </node>
+
+    <!--Global parameters-->
+    <rosparam command="load" file="$(find dconfig)/global.yml"/>
+
+</launch>

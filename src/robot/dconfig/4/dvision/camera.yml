@@ -1,0 +1,68 @@
+dvision:
+  camera:
+    debug:                 false
+    device:                /dev/video0
+    width:                 640
+    height:                480
+    frameRate:             30
+
+    saturation:            64
+    contrast:              32
+    brightness:            0
+    hue:                   0
+    gamma:                 100
+    gain:                  0
+    sharpness:             0
+
+    exposure_auto:         1 # 0 is auto, 1 is manual
+    exposure_absolute:     154
+
+    whitebalance_auto:     1
+    whitebalance_absolute: 3730
+
+    focus_auto:            1
+    focus_absolute:        0
+
+  projection:
+    fx:                    373.5292375280499
+    fy:                    373.1042415077384
+    cx:                    297.2950420846531
+    cy:                    246.3568547023241
+    dist_coeff:            [5.837807708795447,
+                            1.86032617702955,
+                            0.0005425776456626039,
+                            -0.0002849735383578128,
+                            0.0234990397474855,
+                            6.244719966152481,
+                            3.907685914873285,
+                            0.274012294483195,
+                            0.006497651617606731,
+                            -0.001169908970874783,
+                            -0.001333898622732711,
+                            0.0002113274593304979,
+                            -0.007339087689765991,
+                            0.01038043425502824]
+
+
+
+    extrinsic_para: [
+                     2.0707,
+                     -0.7315,
+                     47.3240,
+                     -0.0138,
+                     -0.2213,
+                     0.0046,
+                     2.8902,
+                     -0.3321,
+                     6.3462,
+                     -0.0039,
+                     -0.0424,
+                     -0.0295,
+                     0.9873,
+                     0.9739,
+                     -0.0081,
+                     0.0719,
+                     ]
+
+
+# Update by Yyj interal parameters 23 July

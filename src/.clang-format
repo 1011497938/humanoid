@@ -1,0 +1,132 @@
+BasedOnStyle: Mozilla
+Language: Cpp
+Standard:        C++11
+ColumnLimit: 200
+IndentWidth: 4
+UseTab: Never
+
+AlignEscapedNewlinesLeft: false
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: false
+AlignTrailingComments: true
+AlignAfterOpenBracket: Align
+AlwaysBreakTemplateDeclarations: true
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+BinPackArguments: false
+BinPackParameters: false
+
+IndentCaseLabels: true
+MaxEmptyLinesToKeep: 1
+ObjCBlockIndentWidth: 4
+ObjCSpaceAfterProperty: true
+ObjCSpaceBeforeProtocolList: true
+
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInCStyleCastParentheses: false
+SpacesInContainerLiterals: false
+SpacesInParentheses: false
+
+
+
+
+# ---
+# Language:        Cpp
+# # BasedOnStyle:  Google
+# BasedOnStyle:  llvm
+#
+# AlignAfterOpenBracket: Align
+# AlwaysBreakTemplateDeclarations: true
+# AllowShortBlocksOnASingleLine: false
+# AllowShortCaseLabelsOnASingleLine: false
+# AllowShortFunctionsOnASingleLine: None
+# AllowShortIfStatementsOnASingleLine: false
+# AllowShortLoopsOnASingleLine: false
+# Standard:        C++11
+# UseTab:          Never
+# ColumnLimit:     200
+# IndentWidth:     4
+#
+# # AccessModifierOffset: -1
+# # AlignConsecutiveAssignments: true
+# # AlignConsecutiveDeclarations: true
+# # AlignEscapedNewlinesLeft: true
+# # AlignOperands:   true
+# # AlignTrailingComments: true
+# # AllowAllParametersOfDeclarationOnNextLine: true
+# # AlwaysBreakAfterDefinitionReturnType: None
+# # AlwaysBreakAfterReturnType: None
+# # AlwaysBreakBeforeMultilineStrings: true
+# # BinPackArguments: false
+# # BinPackParameters: false
+# # BraceWrapping:
+# #   AfterClass:      false
+# #   AfterControlStatement: false
+# #   AfterEnum:       false
+# #   AfterFunction:   false
+# #   AfterNamespace:  false
+# #   AfterObjCDeclaration: false
+# #   AfterStruct:     false
+# #   AfterUnion:      false
+# #   BeforeCatch:     false
+# #   BeforeElse:      false
+# #   IndentBraces:    false
+# # BreakBeforeBinaryOperators: None
+# # BreakBeforeBraces: Linux
+# # BreakBeforeTernaryOperators: true
+# # BreakConstructorInitializersBeforeComma: false
+# # CommentPragmas:  '^ IWYU pragma:'
+# # ConstructorInitializerAllOnOneLineOrOnePerLine: true
+# # ConstructorInitializerIndentWidth: 4
+# # ContinuationIndentWidth: 4
+# # Cpp11BracedListStyle: true
+# # DerivePointerAlignment: true
+# # DisableFormat:   false
+# # ExperimentalAutoDetectBinPacking: false
+# # ForEachMacros:   [ foreach, Q_FOREACH, BOOST_FOREACH ]
+# # IncludeCategories:
+# #   - Regex:           '^<.*\.h>'
+# #     Priority:        1
+# #   - Regex:           '^<.*'
+# #     Priority:        2
+# #   - Regex:           '.*'
+# #     Priority:        3
+# # IndentCaseLabels: true
+# # IndentWrappedFunctionNames: false
+# # KeepEmptyLinesAtTheStartOfBlocks: false
+# # MacroBlockBegin: ''
+# # MacroBlockEnd:   ''
+# # MaxEmptyLinesToKeep: 2
+# # NamespaceIndentation: None
+# # ObjCBlockIndentWidth: 4
+# # ObjCSpaceAfterProperty: false
+# # ObjCSpaceBeforeProtocolList: false
+# # PenaltyBreakBeforeFirstCallParameter: 1
+# # PenaltyBreakComment: 300
+# # PenaltyBreakFirstLessLess: 120
+# # PenaltyBreakString: 1000
+# # PenaltyExcessCharacter: 1000000
+# # PenaltyReturnTypeOnItsOwnLine: 200
+# # PointerAlignment: Left
+# # ReflowComments:  true
+# # SortIncludes:    true
+# # SpaceAfterCStyleCast: true
+# # SpaceBeforeAssignmentOperators: true
+# # SpaceBeforeParens: ControlStatements
+# # SpaceInEmptyParentheses: false
+# # SpacesBeforeTrailingComments: 2
+# # SpacesInAngles:  false
+# # SpacesInContainerLiterals: true
+# # SpacesInCStyleCastParentheses: false
+# # SpacesInParentheses: false
+# # SpacesInSquareBrackets: false
+#
+# # TabWidth:        4
+#
+# # ...

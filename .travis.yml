@@ -1,0 +1,62 @@
+---
+# Use ubuntu trusty (14.04) with sudo privileges.
+sudo: required
+services: docker
+
+# Cache intermediate Docker layers. For a description of how this works, see:
+# https://giorgos.sealabs.net/docker-cache-on-travis-and-docker-112.html
+cache:
+  directories:
+    - /home/travis/docker/
+# Configuration variables. All variables are global now, but this can be used to
+# trigger a build matrix for different ROS distributions if desired.
+env:
+  global:
+    - ROS_RELEASE=kinetic
+    # Docker
+    - DOCKER_REPOSITORY=zjudancer/humanoid
+    - DOCKERFILE_PATH=${TRAVIS_BUILD_DIR}/Dockerfile
+    - DOCKER_CACHE_FILE=/home/travis/docker/cache.tar.gz
+
+################################################################################
+
+# Install system dependencies, namely a very barebones ROS setup.
+before_install:
+  - uname -a
+  - docker --version
+  - echo "ENV GIT_SHA ${TRAVIS_COMMIT}" >> Dockerfile
+  - ls -ll /home/travis/docker/
+  - if [ -f ${DOCKER_CACHE_FILE} ]; then gunzip -c ${DOCKER_CACHE_FILE} | docker load; fi
+
+# Create a catkin workspace with the package under integration.
+install:
+  - cd ${TRAVIS_BUILD_DIR}/../../
+  - git clone git@github.com:ZJUDancer/humanoid-lib.git ZJUDancer/humanoid-lib
+  - docker build -t ${DOCKER_REPOSITORY}:${TRAVIS_COMMIT} -f ${DOCKERFILE_PATH} --pull=true .
+
+# Install all dependencies, using wstool first and rosdep second.
+# wstool looks for a ROSINSTALL_FILE defined in the environment variables.
+before_script:
+  - env > .env
+
+# Compile and test (mark the build as failed if any step fails). If the
+# CATKIN_OPTIONS file exists, use it as an argument to catkin_make, for example
+# to blacklist certain packages.
+#
+# NOTE on testing: `catkin_make run_tests` will show the output of the tests
+# (gtest, nosetest, etc..) but always returns 0 (success) even if a test
+# fails. Running `catkin_test_results` aggregates all the results and returns
+# non-zero when a test fails (which notifies Travis the build failed).
+script:
+  # Need tests here
+  # Save built images to Travis cache directory
+  - if [[ ${TRAVIS_BRANCH} == "master" ]] || [[ ${TRAVIS_BRANCH} == "develop" ]] && [[ ${TRAVIS_PULL_REQUEST} == "false" ]]; then mkdir -p $(dirname ${DOCKER_CACHE_FILE}) ; docker save $(docker history -q ${DOCKER_REPOSITORY}:${TRAVIS_COMMIT} | grep -v '<missing>') | gzip > ${DOCKER_CACHE_FILE}; fi
+
+################################################################################
+# Misc
+branches:
+  only:
+    - master
+    - develop
+notifications:
+  email: xxdsox@gmail.com

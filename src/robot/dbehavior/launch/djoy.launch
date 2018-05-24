@@ -1,0 +1,23 @@
+<launch>
+    <node
+    pkg="joy"
+    name="joy_node"
+    type="joy_node"
+    output="screen"
+    respawn="false"
+    required="true"
+    cwd="node"
+    args=""
+    />
+
+  <node
+    pkg="dbehavior"
+    name="djoy_node"
+    type="djoy.py"
+    output="screen"
+    respawn="false"
+    required="true"
+    cwd="node"
+    args=""
+    />
+</launch>

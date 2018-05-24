@@ -1,0 +1,62 @@
+dbehavior:
+  constant:
+    HALF_TIME:                       600
+    BALL_DROP_CYCLE:                 3
+    LOST_BALL_DELAY:                 1000000  # 1 sec
+    MAX_VIEW_DIST:                   500
+    UNKNOWN:                         9999
+    maxYaw:                    90
+    maxPitch:                  70
+    minPitch:                  0
+    # game controller state
+    STATE_INITIAL:                   0
+    STATE_READY:                     1
+    STATE_SET:                       2
+    STATE_PLAYING:                   3
+    STATE_FINISHED:                  4
+    STATE_INVALID:                   6
+    STATE_PENALISED:                 7
+    ROBOTS_PER_TEAM:                 6
+    TEAM_BLUE:                       0
+    TEAM_CYAN:                       0
+    TEAM_RED:                        1
+    TEAM_MAGENTA:                    1
+    # stable
+    STABLE:                          0
+    RIGHTDOWN:                       1
+    LEFTDOWN:                        2
+    FRONTDOWN:                       3
+    BACKDOWN:                        4
+    # spedd
+    WALK_SPEED:                      17.3 # 450 / 26
+    TURN_SPEED:                      15
+    # Role enums
+    ROLE_NONE:                       0
+    ROLE_GOALIE:                     1
+    ROLE_STRIKER:                    2
+    ROLE_DEFENDER:                   3
+    ROLE_MIDFIELDER:                 4
+    # ROLE_STR:                        ['NONE', 'Goalie', 'Striker', 'Defender', 'MidFielder']
+    # image
+    IMAGE_WIDTH:                     640
+    IMAGE_HEIGHT:                    480
+    VIEW_CENTER:                     [320, 240] # VecPos(IMAGE_WIDTH / 2, IMAGE_HEIGHT / 2)
+    # Attack side
+    INVALID:                         -1
+    LEFT:                            0
+    RIGHT:                           1
+    # ATTACK MODE
+    ONLY_KICK:                       1
+    KICK_NEAR_GOAL:                  2
+    # ball
+    NUM_LOST_FRAMES_TEAM_BALL_LOST:  300
+    NUM_LOST_FRAMES_CAN_SEE_BALL:    300
+    # role
+    GOALIE_ID:                       [2]
+    GOALIE:                          [3]
+    STRIKER:                         [5, 6]
+    DEFENDER:                        [4]
+    KICKOFF:                         [5, 6]
+    # pos
+    X:                               0
+    Y:                               0

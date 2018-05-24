@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find dvision)/launch/1.launch"/>
+  <include file="$(find dmotion)/launch/1.launch" />
+  <include file="$(find dnetwork)/launch/1.launch"/>
+
+  <param name="/ZJUDancer/Simulation" value="true"/>
+</launch>

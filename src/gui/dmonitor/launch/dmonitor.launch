@@ -1,0 +1,13 @@
+<launch>
+    <node pkg="dmonitor"
+          name="dmonitor"
+          type="dmonitor"
+          output="screen"
+          respawn="false"
+          required="true"
+          cwd="node"
+          args=""/>
+    <rosparam command="load" file="$(find dconfig)/dvision/misc.yml"/>
+    <rosparam command="load" file="$(find dconfig)/dvision/camera.yml"/>
+    <rosparam command="load" file="$(find dconfig)/dvision/localization.yml"/>
+</launch>

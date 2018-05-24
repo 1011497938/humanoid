@@ -1,0 +1,31 @@
+#pragma once
+
+enum GaitStateType
+{
+    CROUCH,
+    STANDUP,
+    STEP,
+    SAMLLWALK,
+    SMALLWALK_3CM,
+
+    SMALLWALK_5CM,
+    WALK,
+    LEFTMOVE,
+    RIGHTMOVE,
+    WALKBACK,
+
+    LEFTKICK, // 11
+    RIGHTKICK,
+    KICK,
+    GOALIELEFT,
+    GOALIERIGHT,
+    GOALIEMID,
+    SETUPFRONTDOWN,
+
+    SETUPBACKDOWN,
+    SETUPLEFTDOWN,
+    SETUPRIGHTDOWN,
+    WALKLEFTKICK,
+    WALKRIGHTKICK,
+    WENXI
+};

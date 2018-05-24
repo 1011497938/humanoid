@@ -1,0 +1,141 @@
+dmotion:
+  hardware:
+    serial_port_name            :  /dev/ttyUSB
+    serial_port_number          :  0
+    serial_port_baudrate        :  115200
+    robot_version               :  2013
+    imu_version                 :  ADIS16355AMLZ
+    gyroscope_correct           :  1.372
+    imu_prepare_time            :  15
+
+  robot:
+    motor_time                  : 0.012
+    number                      : 1
+    oldturning                  : 0
+    stand2crouch_stepnum        : 50
+    staticExit_num              : 2
+    diffh                       : 0
+    diffv                       : 0
+
+    stepk                       : 1
+    stand2crouch2step           : 2
+    stand2crouch2step_height    : 0.5
+    other2crouch2step           : 3
+    other2crouch2step_height    : 1
+    stand2crouch2step_cm        : 1
+    other2crouch2step_cm        : 3
+
+    # Walking Ability
+    step_theta_max              : 15
+    ad_x_max                    : 2
+    ad_theta_max                : 15
+    mid_x_max                   : 4
+    mid_theta_max               : 10
+    top_x_max                   : 4.5
+    top_theta_max               : 5
+    back_x_max                  : -2.1
+    back_theta_max              : 10
+    left_y_max                  : 1.8
+    right_y_max                 : -1.8
+
+    # Walking Correction
+    step_x_amend                : -1.5
+    x_compensation_acc          : 0.35
+    x_compensation_dec          : 0.35
+    back_theta_amend            : 0
+    step_theta_amend            : -0.5
+    mid_theta_amend             : 0
+    top_theta_amend             : 0.0
+
+    # Fixed Data
+    upper_leg                   : 10.8
+    lower_leg                   : 10.8
+    upper_arm                   : 13.5
+    lower_arm                   : 13.5
+    hip_distance                : 8
+    lbz                         : 0
+    g                           : 980
+    dt                          : 0.012
+
+    # Gait Data
+
+    stepnum                     : 29
+    hipheight                   : 20
+    yzmp                        : -5
+    ankle_distance              : 9
+    ankle_dev_l                 : 0
+    ankle_dev_l_tk              : 0
+    ankle_dev_r                 : 0
+    ankle_dev_r_tk              : 0
+
+        # Leftleg
+    ah_ml_zero                  : 4
+    ah_ml_mid                   : 4.5
+    ah_ml_top                   : 4.5
+    ah_fl                       : 0.3
+
+        # Rightleg
+    ah_mr_zero                  : 5
+    ah_mr_mid                   : 5
+    ah_mr_top                   : 5
+    ah_fr                       : 0.3
+
+        # CM Correction
+    cm_r                        : -2
+    cm_p                        : 14
+    cm_y                        : 0.0
+    cm_dx                       : 0.2
+    cm_dy                       : -0.0
+    cm_dp_fk                    : 0
+    cm_dx_fk                    : 0.15
+    percent_fx                  : 1
+    cm_dx_bk                    : -0.2
+    percent_bx                  : 0.85
+    cm_dy_lk                    : 0.3
+    percent_ly                  : 0.8
+    cm_dy_rk                    : -0.3
+    percent_ry                  : 0.8
+    ra_r                        : 0
+    ra_p                        : -4
+    ra_y                        : 0
+    la_r                        : 0
+    la_p                        : -4
+    la_y                        : 0
+    la_dr_lk                    : 0
+    ra_dr_lk                    : 0
+    la_dr_rk                    : 0
+    ra_dr_rk                    : 0
+    la_dp_fk                    : 0
+    ra_dp_fk                    : 0
+    la_dp_bk                    : 0
+    ra_dp_bk                    : 0
+
+    # OTHER
+    arm_crouch_p                : 20
+    arm_crouch_theta            : -30
+
+    setupside_stepnum           : 30
+    setupside_ankle_theta       : 30
+    setupside_arm_theta         : 0
+
+    goalie_time                 : 2
+    goalie_theta                : -150
+    goalie_stepnum              : 50
+    goalie_bool                 : true
+    getup_bool                  : true
+
+    # Kick data
+    kicklength_l                : 6
+    kickheight_l                : 5
+    kickexcute_l                : 4
+    kicklength_r                : 6
+    kickheight_r                : 7.5
+    kickexcute_r                : 4
+    kickpercent                 : 0.85
+
+    # odometer
+    forward_k                   : 1.73
+    back_k                      : 1
+    left_k                      : 1
+    right_k                     : 1
+    angle_k                     : 1
